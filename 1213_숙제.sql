@@ -208,27 +208,6 @@ ON E.DEPTNO = D.DEPTNO
 GROUP BY D.DEPTNO
 HAVING COUNT(*) >= 4
 
--- 1. 사원번호가 7369인 사원의 급여를 기존 급여에 20%를 인상하시오. (update 이용)
-UPDATE EMP SET SAL = SAL*0.2 WHERE EMPNO = 7369
-
--- 2. 사원번호가 7839, 7499인 사원의 보너스를 200씩 지급하시오. (update 이용)
-UPDATE EMP SET COMM = COMM + 200 WHERE EMPNO = 7839 OR EMPNO = 7499
-
--- 3. 사원번호 5000, 사원이름 현상원, 직업 MANAGER, 입사날짜 오늘날짜로 사원을 추가하시오. (insert 이용)
-INSERT INTO EMP (EMPNO, ENAME, JOB, HIREDATE) VALUES (5000, '현상원', 'MANAGER', NOW())
-
--- 4. 사원번호 5001, 사원이름 아이유, 직업 ANALYST, 입사날짜 오늘날짜로 사원을 추가하시오. (insert 이용)
-INSERT INTO EMP (EMPNO, ENAME, JOB, HIREDATE) VALUES (5001, '아이유', 'ANALYST', NOW())
-
--- 5. 사원이름이 아이유인 사원의 급여 3000, 보너스 100을 지급하시오. (update 이용)
-UPDATE EMP SET SAL = 3000, COMM = 100 WHERE ENAME = '아이유'
-
--- 6. 사원이름이 현상원이고 직업이 MANAGER 사원의 사수번호를 7839로 수정하시오. (update 이용)
-UPDATE EMP SET MGR = 7839, JOB = 'MANAGER' WHERE ENAME = '현상원'
-
--- 7. 사원번호 5000, 5001인 사원을 삭제하시오. (delete 이용)
-
-
 
 
 
